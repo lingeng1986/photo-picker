@@ -1,0 +1,31 @@
+{
+  "preprocessing": {
+    "blur_threshold": 80,
+    "burst_window_seconds": 2.0,
+    "thumbnail_max_size": 1024
+  },
+  "ai_evaluation": {
+    "model": "llava:13b",
+    "timeout_seconds": 60,
+    "batch_size": 4
+  },
+  "selection": {
+    "weights": {
+      "eyes_open": 10,
+      "expression_natural": 8,
+      "eye_contact": 6,
+      "quality": 5,
+      "lighting": 3,
+      "composition": 2
+    }
+  },
+  "output": {
+    "copy_not_selected": true
+  },
+  "detector": {
+    "model": "assets/models/face_detection_yunet_2023mar.onnx",
+    "score_threshold": 0.6,
+    "nms_threshold": 0.3,
+    "top_k": 5000
+  }
+}
